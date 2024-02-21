@@ -31,7 +31,8 @@ function caesarCipher(plainText, key) {
 
     let cipherText = "";
 
-    const Z = 90, A = 65;
+    const Z = 90,
+        A = 65;
 
     for (let i = 0; i < plainText.length; i++) {
         if (plainText[i].toLowerCase() !== plainText[i]) {
@@ -50,4 +51,25 @@ function caesarCipher(plainText, key) {
     return cipherText;
 }
 
-module.exports = { capitalize, reverseString, calculator, caesarCipher };
+function analyzeArray(arr) {
+    let min = arr[0],
+        max = arr[0],
+        total = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) max = arr[i];
+        if (arr[i] < min) min = arr[i];
+
+        total += arr[i];
+    }
+
+    return { average: total / arr.length, min, max, length: arr.length };
+}
+
+module.exports = {
+    capitalize,
+    reverseString,
+    calculator,
+    caesarCipher,
+    analyzeArray,
+};
