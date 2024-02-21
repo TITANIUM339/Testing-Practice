@@ -26,4 +26,28 @@ const calculator = (() => {
     return { add, subtract, divide, multiply };
 })();
 
-module.exports = { capitalize, reverseString, calculator };
+function caesarCipher(plainText, key) {
+    plainText = plainText.toUpperCase();
+
+    let cipherText = "";
+
+    const Z = 90, A = 65;
+
+    for (let i = 0; i < plainText.length; i++) {
+        if (plainText[i].toLowerCase() !== plainText[i]) {
+            let newCharCode = plainText.charCodeAt(i) + key;
+
+            if (newCharCode > Z) {
+                cipherText += String.fromCharCode(newCharCode - Z + A - 1);
+            } else {
+                cipherText += String.fromCharCode(newCharCode);
+            }
+        } else {
+            cipherText += plainText[i];
+        }
+    }
+
+    return cipherText;
+}
+
+module.exports = { capitalize, reverseString, calculator, caesarCipher };
