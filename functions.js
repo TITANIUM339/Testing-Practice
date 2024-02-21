@@ -2,4 +2,8 @@ function capitalize(str) {
     return str[0].toUpperCase() + str.slice(1);
 }
 
-module.exports = { capitalize };
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+
+module.exports = { capitalize, reverseString };
