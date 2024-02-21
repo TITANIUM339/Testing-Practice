@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/TITANIUM339/Testing-Practice/issues"
   },
-  "homepage": "https://github.com/TITANIUM339/Testing-Practice#readme",
+  "homepage": "https://github.com/TITANIUM339/Testing-Practice",
   "devDependencies": {
     "jest": "^29.7.0"
   },
